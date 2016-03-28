@@ -1,12 +1,12 @@
 import assign from 'object-assign'
 import { expect } from  'chai'
-import ExportMap from 'core/getExports'
+import ExportMap from 'eslint-module-utils/ExportMap'
 
 import * as fs from 'fs'
 
 import { getFilename } from '../utils'
 
-describe('getExports', function () {
+describe('ExportMap', function () {
   const fakeContext = {
     getFilename: getFilename,
     settings: {},

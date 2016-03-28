@@ -1,11 +1,15 @@
-import moduleRequire from './module-require'
-import assign from 'object-assign'
+"use strict"
+exports.__esModule = true
 
-export default function (content, context) {
+const assign = require('object-assign')
+const moduleRequire = require('./module-require').default
+
+exports.default = function parse(content, context) {
 
   if (context == null) throw new Error("need context to parse properly")
 
-  let { parserOptions, parserPath } = context
+  let parserOptions = context.parserOptions
+    , parserPath = context.parserPath
 
   if (!parserPath) throw new Error("parserPath is required!")
 

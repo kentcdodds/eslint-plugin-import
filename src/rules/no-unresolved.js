@@ -5,7 +5,7 @@
 
 import 'es6-symbol/implement'
 
-import resolve from '../core/resolve'
+import resolve from 'eslint-module-utils/resolve'
 
 module.exports = function (context) {
 
